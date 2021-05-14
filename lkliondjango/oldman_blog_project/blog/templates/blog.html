@@ -1,0 +1,23 @@
+<head>
+    <title>늙은이 Blog</title>
+</head>
+
+<body>
+    {% for notice in notices.all %}
+    <div>
+        <h1 style="color: red;">공지 : {{notice.notice_title}}</h1>
+        <p>작성자: {{notice.name}} 학번: {{notice.student_code}}</p>
+        <p>{{notice.pub_date}}</p>
+        <p>{{notice.body}}</p>
+    </div>
+    {%endfor%}
+    <br>
+    <br>
+    {% for blog in blogs.all %}
+    <div>
+        <h2>{{blog.title}}</h2>
+        <p>{{blog.pub_date}}</p>
+        <p>{{blog.body}}</p>
+    </div>
+    {% endfor %}
+</body>
