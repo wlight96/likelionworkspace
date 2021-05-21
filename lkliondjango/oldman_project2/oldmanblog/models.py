@@ -20,3 +20,9 @@ class Oldman_notice(models.Model):
         return self.notice_title
     def summary(self):
         return self.body[:100]
+
+class Oldman_data(models.Model):
+    data_title = models.CharField(max_length=100)
+    pub_date = models.DateField('date published')
+    body = models.TextField()
+    data_link = models.CharField(max_length=200)

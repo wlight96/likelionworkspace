@@ -1,6 +1,6 @@
 from datetime import time
 from django.shortcuts import redirect,render
-from .models import Oldman_blog, Oldman_notice
+from .models import Oldman_blog, Oldman_data, Oldman_notice
 from django.utils import timezone
 # Create your views here.
 
@@ -39,3 +39,7 @@ def update(request, blog_id):
     blog.pub_date = timezone.datetime.now()
     blog.save()
     return redirect('/blog/' + str(blog.id))
+
+def aboutme(request):
+    oldmnadatas = Oldman_data.objects
+    return render(request,'aboutme.html',{'olmandatas' : oldmnadatas})
