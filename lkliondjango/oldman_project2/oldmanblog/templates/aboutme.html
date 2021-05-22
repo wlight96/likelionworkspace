@@ -37,23 +37,60 @@
           멋쟁이 사자들 9기
         </div>
       </div>
+      <br><br>
     <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            {{% for aboutme in oldmandatas.all %}}
-            <div class="col">
-              <div class="card h-100">
-                <img src="/static/image/github_img.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{aboutme.data_title}}</h5>
-                  <p class="card-text">{{aboutme.body}}</p>
-                  <a href="{{aboutme.data_link}}" class="btn btn-primary">Go</a>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">{{aboutme.pub_date}}</small>
-                </div>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="/static/image/github_img.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">github</h5>
+                <p class="card-text">감자심는 노인네의 github ... 올해도 잔디 심기는 실패한듯한 귀찮은 개발자...☆</p>
+                <a href="https://github.com/wlight96" class="btn btn-primary">Go</a>
+              </div>                <div class="card-footer">
+                <small class="text-muted">23.05.2020</small>
               </div>
-            </div>
-            {%endfor%}
+             </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="/static/image/instagram.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">instagram</h5>
+                <p class="card-text">oldman의 라떼는 말야...인스타 선팔과 맞팔은 언제나 oldman에게 즐거움을 줍니다.☆
+                  뭐... 저는 그렇다고요 허허허...  
+                </p>
+                <a href="https://www.instagram.com/say0323/" class="btn btn-primary">Go</a>
+              </div>                <div class="card-footer">
+                <small class="text-muted">23.05.2020</small>
+              </div>
+             </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="/static/image/MBTI.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">MBTI</h5>
+                <p class="card-text">oldman의 MBTI 는 ESFJ 일겁니다... 아마 맞을꺼에요 껄껄껄...  
+                </p>
+              </div>                <div class="card-footer">
+                <small class="text-muted">23.05.2020</small>
+              </div>
+             </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="/static/image/oldman.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Notion</h5>
+                <p class="card-text">oldman과 감자들의 개발 일지.  
+                </p>
+                <a href="https://www.notion.so/5eaaa010feee41438459a0adef7b7016?v=71f27951c4144fedb8cf51a9f890ab42" class="btn btn-primary">Go</a>
+              </div>                <div class="card-footer">
+                <small class="text-muted">23.05.2020</small>
+              </div>
+             </div>
+          </div>
     </div>
 </body>
 </html>
