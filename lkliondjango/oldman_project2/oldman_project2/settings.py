@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'account.apps.AccountConfig',
+    'aboutme.apps.AboutmeConfig',
     'oldmanblog.apps.OldmanblogConfig',
 ]
 
@@ -55,7 +57,9 @@ ROOT_URLCONF = 'oldman_project2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'oldman_project2/templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,6 +128,6 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')
-] #static ÆÄÀÏµéÀÌ ¾îµð¿¡ ÀÖ´ÂÁö¸¦ ¾²´Â°÷
+] #static ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
