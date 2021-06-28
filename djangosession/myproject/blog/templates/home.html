@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
     {% for blog in posts %}
-            <h1>{{blog.title}}</h1>
-            <p>{{blog.pub_date}}</p>
-            <p>{{blog.summary}}<a href="{%url 'detail' blog.id %}">...more</a></p>
+            <h1 class="main-title">{{blog.title}}</h1>
+            <p class="main-date">{{blog.pub_date}}</p>
+            <p class="main-summary">{{blog.summary}}<a href="{%url 'detail' blog.id %}">...more</a></p>
     {% endfor%}
 
     {% if posts.has_previous %}

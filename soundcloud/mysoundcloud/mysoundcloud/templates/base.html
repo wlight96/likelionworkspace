@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" type='text/css'>
+</head>
+<body>
+    <nav class = "nav-container">
+        <div class = "item-container">
+            <ul class = "nav-item-left-container">
+                <li class="nav-item margin-right"><a  href="">SOUNDCLOUD</a></li>
+                <li class="nav-item" ><a href="">Home</a></li>
+                <li class="nav-item" ><a href="">Stream</a></li>
+                <li class="nav-item" ><a href="">Library</a></li>
+            
+
+                <li class="nav-item" ><a href="">Upload</a></li>
+                <li class="nav-item" ><a href="">o o o</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="main-container">
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
