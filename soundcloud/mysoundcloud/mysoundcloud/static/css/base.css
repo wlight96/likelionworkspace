@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+    padding: 75;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav-container{
+    width: 100%;
+    height: 46px;
+    background-color: #333;
+    position: sticky;
+}
+
+.nav-item-left-container{
+    display: inline;   
+    float: left;
+}
+.nav-item-right-container{
+    display: inline;
+    float: right;
+    margin-right: 50px;   
+}
+.nav-item{
+    padding: 10px solid;
+    margin-top: 0px;
+    margin-right:  10px;
+    margin-left:  10px;
+    display: inline;
+}
+.margin-right{
+    margin-right:  15px;
+}
+.nav-item a{
+    color: white;
+}
+.logo{ 
+    border-style: none;
+    padding: 9px;
+    background:linear-gradient(#f70,#f30);
+}
+
+
+.sign-in {
+    background-color: #333;
+    border-style: solid;
+    border-color: #fff;
+    border-radius:3px;
+    border-width: 1px; 
+    padding: 5px;
+}
+
+.searching {
+    background-color: rgb(201, 201, 201);
+    border-style: solid;
+    border-color: #0000;
+    border-radius:3px;
+    border-width: 1px; 
+    padding: 5.5px;
+}
+
+.create-account {
+    border-style:none;
+    padding: 5px;
+    background-color: #f50;
+}
+
+/*main*/
+.main-container{
+    margin: 30px 150px;
+}
+.main-title{
+    font-size : 20px;
+}
+.main-date{
+    font-size: 10px;
+}
+.main-summary{
+    font-size: 12px;
+}

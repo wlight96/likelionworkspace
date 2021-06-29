@@ -2,7 +2,8 @@ from django.db import models
 
 # Create your models here.
 class Track(models.Model):
-    title = models.CharField(max_length = 100)
+    title = models.CharField(max_length = 100, default='', null=True)
+    genre = models.CharField(max_length = 100)
     pub_dated = models.DateTimeField('data published')
     body = models.TextField()
     def __str__(self):

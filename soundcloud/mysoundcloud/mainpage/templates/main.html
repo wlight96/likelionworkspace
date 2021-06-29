@@ -1,5 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <div class="main-container">
+        <h1 class="main-title">POP</h1>
+        {% for POP_track in pop_list %}
+            <p class="main-date">{{POP_track.title}}</p>    
+            <p class="main-date">{{POP_track.pub_dated}}</p>
+            <p class="main-summary">{{POP_track.summary}}</p>
+        {% endfor%}
+    </div>
+    <h1 class="main-title">K-POP</h1>        
+    {% for k_track in k_list %}
+        <p class="main-date">{{k_track.title}}</p>    
+        <p class="main-date">{{k_track.pub_dated}}</p>
+        <p class="main-summary">{{k_track.summary}}</p>
+    {% endfor%}
 
 {% endblock %}
