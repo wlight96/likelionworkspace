@@ -1,19 +1,82 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="main-container">
+<div class="main-left-container">
+    <div class="main-track-container">
         <h1 class="main-title">POP</h1>
-        {% for POP_track in pop_list %}
-            <p class="main-date">{{POP_track.title}}</p>    
-            <p class="main-date">{{POP_track.pub_dated}}</p>
-            <p class="main-summary">{{POP_track.summary}}</p>
-        {% endfor%}
+        {%if pop_list.has_previous %}
+            <div class = "main-previous-bt">
+                <a href="?p_page={{pop_list.previous_page_number}}"> &lt; </a>
+            </div>
+        {%endif%}
+        <div class="main-album-container">
+            {% for POP_track in pop_list %}
+                <div class="main-album">
+                    {{POP_track.title}}
+                    <p class="main-date">{{POP_track.pub_dated}}</p>  
+                </div>
+            {% endfor%}
+        </div>
+        
+        {%if pop_list.has_next %}
+            <div class="main-next-bt">
+                <a href="?p_page={{pop_list.next_page_number}}">></a>
+            </div>
+        {%endif%}
+        <br>
     </div>
-    <h1 class="main-title">K-POP</h1>        
-    {% for k_track in k_list %}
-        <p class="main-date">{{k_track.title}}</p>    
-        <p class="main-date">{{k_track.pub_dated}}</p>
-        <p class="main-summary">{{k_track.summary}}</p>
-    {% endfor%}
-
+    <br>
+    <div class="main-track-container">
+        <h1 class="main-title">K-POP</h1>
+        {%if k_list.has_previous %}
+            <div class = "main-previous-bt">
+                <a href="?k_page={{k_list.previous_page_number}}"> &lt; </a>
+            </div>
+        {%endif%}
+        <div class="main-album-container">
+            {% for k_track in k_list %}
+                <div class="main-album">
+                    {{k_track.title}}
+                    <p class="main-date">{{k_track.pub_dated}}</p>  
+                </div>
+            {% endfor%}
+        </div>
+        
+        {%if k_list.has_next %}
+            <div class="main-next-bt">
+                <a href="?k_page={{k_list.next_page_number}}">></a>
+            </div>
+        {%endif%}
+        <br>
+    </div>
+    <div class="main-track-container">
+        <h1 class="main-title">jazz</h1>
+        {%if jazz_list.has_previous %}
+            <div class = "main-previous-bt">
+                <a href="?j_page={{jazz_list.previous_page_number}}"> &lt; </a>
+            </div>
+        {%endif%}
+        <div class="main-album-container">
+            {% for j_track in jazz_list %}
+                <div class="main-album">
+                    {{j_track.title}}
+                    <p class="main-date">{{j_track.pub_dated}}</p>  
+                </div>
+            {% endfor%}
+        </div>
+        
+        {%if jazz_list.has_next %}
+            <div class="main-next-bt">
+                <a href="?j_page={{jazz_list.next_page_number}}">></a>
+            </div>
+        {%endif%}
+        <br>
+    </div>
+    <br>
+</div>
+<div class="main-right-container">
+    <div class="main-google">
+        <a href="" style="color: azure;">살려줘</p>
+    </div>
+</div>
 {% endblock %}
