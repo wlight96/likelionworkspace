@@ -3,7 +3,24 @@ window.onload = function(){
     let ctable = document.getElementsByClassName("table__table");
     let btn = document.getElementById("add-button");
     let cbox = document.createElement("input");
+    let sibal = document.querySelector("#sibal");
     cbox.type = 'checkbox';
+    
+    function del_list(){
+        let n = 0;
+        let cbox_list = document.querySelectorAll("#cbox_list");
+        for(let i = 0; i< cbox_list.length; i++){
+            if(cbox_list[i].checked === true){
+                n = i
+            }
+        }
+        let ox = confirm("정말로 삭제하시겠습니까?");
+        if(ox == true){
+            ctable[0].deleteRow(n+1);
+        }else{
+            cbox_list[n].checked = false;
+        }
+    }
 
     function addtable(){
         let table_line = document.createElement("tr");
@@ -19,14 +36,10 @@ window.onload = function(){
         
         c_box.innerHTML = "<input type=\"checkbox\" id = \"cbox_list\">"
         
-        c_box.addEventListener('change',function(e){
-            let delete_list = confirm("정말로 삭제하시겠습니까?");
-            if(delete_list == true){    
-                del_list();
-            }else{
-                cbox.checked = false;
-            }
+        c_box.addEventListener('click',function(e){
+            del_list();
         })
+
         std.innerText = schedule.value;
         table_line.appendChild(dates);
         table_line.appendChild(std);
@@ -45,15 +58,4 @@ window.onload = function(){
             schedule.value = "";
         }
     });
-
-    function del_list(){
-        let n = 0;
-        let cbox_list = document.querySelectorAll("#cbox_list");
-        for(let i = 0; i< cbox_list.length; i++){
-            if(cbox_list[i].checked === true){
-                n = i
-            }
-        }
-        ctable[0].deleteRow(n+1);
-    }
 }
