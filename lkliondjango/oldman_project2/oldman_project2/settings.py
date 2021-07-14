@@ -128,6 +128,6 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')
-] #static ���ϵ��� ��� �ִ����� ���°�
+] #static 폴더내 이미지 파일 있음 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
